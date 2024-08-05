@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Certificate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .certificate-container {
+            width: 80%;
+            max-width: 800px;
+            border: 2px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .photo-box {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        
+        .header-center {
+            text-align: center;
+            flex: 1;
+            padding: 0 20px;
+        }
+        
+        .header-center img {
+            height: 60px;
+        }
+        
+        .header-center h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .header-center h3 {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        
+        .header-center p {
+            font-size: 12px;
+        }
+        
+        .certify {
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-align: justify;
+        }
+        
+        .dotted-line {
+            border-bottom: 2px dotted #000;
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        
+        .dotted-line.long {
+            width: calc(60% - 20px);
+        }
+        
+        .dotted-line.short {
+            width: calc(20% - 10px);
+        }
+        
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        
+        .form-row {
+            width: 100%;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-row label {
+            width: 30%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .form-row .dotted-line {
+            width: 65%;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="certificate-container">
+        <div class="header">
+            <div class="photo-box">
+                <p>फोटो</p>
+                <img id="husband-photo" src="" alt="Husband's Photo" style="width:100px; height:100px;">
+            </div>
+            <div class="header-center">
+                <img src="logo1.png" alt="logo">
+                <h2>महाराष्ट्र शासन</h2>
+                <p>(महाराष्ट्र सार्वजनिक सेवा केंद्र, वस्त्रकार कॉलनी, ता.कृष्णप्रसाद ३४, तहसील ४२१)</p>
+                <p>फॉर्म - ५ FORM - 5</p>
+                <h3>विवाह नोंदणी प्रमाणपत्र</h3>
+                <p>CERTIFICATE OF REGISTRATION OF MARRIAGE</p>
+                <p>(म्हणजे प्रकरण ६९ च्या नियम १९ द्वारे)</p>
+                <p>(Under Section 6(1) and Rule 19)</p>
+            </div>
+            <div class="photo-box">
+                <p>फोटो</p>
+                <img id="wife-photo" src="" alt="Wife's Photo" style="width:100px; height:100px;">
+            </div>
+        </div>
+        <p class="certify">Certified that the marriage between</p>
+        <form id="certificate-form">
+            <div class="form-row">
+                <label for="husband-name">पति का नाम / Husband's Name:</label>
+                <span class="dotted-line long" id="husband-name"></span>
+                <label for="husband-aadhar">आधार कार्ड संख्या / Aadhar Card Number:</label>
+                <span class="dotted-line long" id="husband-aadhar"></span>
+            </div>
+            <div class="form-row">
+                <label for="residing-at">निवास / Residing at:</label>
+                <span class="dotted-line long" id="residing-at"></span>
+            </div>
+            <div class="form-row">
+                <label for="wife-name">पत्नी का नाम / Wife's Name:</label>
+                <span class="dotted-line long" id="wife-name"></span>
+                <label for="wife-aadhar">आधार कार्ड संख्या / Aadhar Card Number:</label>
+                <span class="dotted-line long" id="wife-aadhar"></span>
+            </div>
+            <div class="form-row">
+                <label for="solemnized-on">शादी की तारीख / Solemnized on:</label>
+                <span class="dotted-line long" id="solemnized-on"></span>
+            </div>
+            <div class="form-row">
+                <label for="register-date">पंजीकृत दिनांक / Registered on:</label>
+                <span class="dotted-line long" id="register-date"></span>
+            </div>
+            <div class="form-row">
+                <label for="volume">खंड का नाम / Volume:</label>
+                <span class="dotted-line long" id="volume"></span>
+                <label for="serial-no">क्रमांक / Serial No.:</label>
+                <span class="dotted-line long" id="serial-no"></span>
+            </div>
+            <div class="form-row">
+                <label for="issued-on">जारी करने की तारीख / Date of issue:</label>
+                <span class="dotted-line long" id="issued-on"></span>
+            </div>
+        </form>
+        <div class="footer">
+            <p>प्राधिकारी का पता / Address of the issuing authority</p>
+            <div class="form-row">
+                <label for="registrar-signature">हस्ताक्षर / Signature of Registrar of Marriage:</label>
+                <span class="dotted-line long" id="registrar-signature"></span>
+            </div>
+            <div class="form-row">
+                <label for="village-officer">ग्राम सेवक / Village Development Officer:</label>
+                <span class="dotted-line long" id="village-officer"></span>
+            </div>
+        </div>
+        <div class="footer">
+            <button id="download-btn">Download PDF</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const data = JSON.parse(decodeURIComponent(urlParams.get('data')));
+
+            const fields = [
+                'husband-name', 'husband-aadhar', 'residing-at', 'wife-name', 'wife-aadhar',
+                'solemnized-on', 'register-date', 'volume', 'serial-no', 'issued-on'
+            ];
+
+            fields.forEach((field, index) => {
+                document.getElementById(field).textContent = data[index] || 'N/A';
+            });
+
+            document.getElementById('husband-photo').src = data[10];
+            document.getElementById('wife-photo').src = data[11];
+
+            document.getElementById('download-btn').addEventListener('click', () => {
+                const {
+                    jsPDF
+                } = window.jspdf;
+                const doc = new jsPDF();
+
+                doc.text('Marriage Certificate', 10, 10);
+                fields.forEach((field, index) => {
+                    doc.text(`${field.replace('-', ' ')}: ${data[index] || 'N/A'}`, 10, 20 + (index * 10));
+                });
+
+                doc.save('certificate.pdf');
+            });
+        });
+    </script>
+</body>
+
+</html>
